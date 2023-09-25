@@ -1,0 +1,27 @@
+@import "./variables";
+@import "./header";
+
+
+.contact {
+    @include flexCenter(row);
+    margin-top: 3em;
+    font-size: $paragraphSize;
+
+    button {
+        background: $primaryBtn;
+        width: $btnWidth;
+        height: $btnHeight;
+    }
+
+}
+
+footer {
+    @extend header;
+    background: lightseagreen;
+    height: 30vh;
+    margin-top: 3em;
+
+    p {
+        font-size: $paragraphSize;
+    }
+}
