@@ -1,21 +1,20 @@
-<?php
+<!DOCTYPE html> 
+<html>
+    <body>
+        <h1>
+            <?php
+                $x=10;
+                $y=5;
+                echo $x . ', ' . $y;
+                //Comment 1
+                # Comment 2
+                /*
+                    multi line
+                */
+            ?>    
+            <?php echo 'Hello World' ?> <!--skraceno ?=-->
+        </h1>
+        <p>My first paragraph.</p>
 
-echo 'Hello World';
-echo 'Hello', ' ','World';
-echo "Joe 's Invoice";
-
-$name='Jana';
-
-echo $name;
-
-
-$x=1;
-$y=&$x;
-$x=3;
-echo $y;
-
-$firstName='Jana';
-echo "Hello $firstName";
-echo "Hello {$firstName}";
-echo 'Hello' . $firstName;
- 
+    </body>
+</html>
