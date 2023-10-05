@@ -1,47 +1,50 @@
 <?php
-/* Data Types */
 
-#Scalar Types
-#bool
-$completed = true;
+// ARRAYS
+$programmingLanguages = ['PHP', 'Java', 'Python'];
 
-#int
-$score = 75;
+$name = 'Ja';
+echo $programmingLanguages[0];
 
-#float
-$price = 0.99;
+var_dump($programmingLanguages);
 
-#string
-$greeting = 'Hello J';
+echo '<pre>';
+print_r($programmingLanguages);
+echo '</pre>';
 
-echo $completed.'<br/>';
-echo $price;
-echo $greeting.'<br/>';
+echo count($programmingLanguages);
 
-echo gettype($price).'<br/>';
-var_dump($completed);
+$programmingLanguages[]='C++';  //adding, push to an array
+array_push($programmingLanguages, 'C', 'GO');
 
+echo '<pre>';
+print_r($programmingLanguages);
+echo '</pre>';
 
-#array
-$companies = [1,2,3,0.5,true];
-#echo $companies;
-print_r($companies);
+$programmingLanguages = [  //like dictionary
+    'php'=> '8.3',
+    'python' => '3.9'
+];
 
+$programmingLanguages['go'] = '1.15';
 
-#declare(strict_types=1);
-
-function sum(int $x, int $y){
-    
-    var_dump($x,$y);
-    echo '<br />';
-    return $x + $y;
-}
-
-$sum = sum(2.5, '3');
-echo $sum . '<br />';
-
-var_dump($sum);
+echo '<pre>';
+print_r($programmingLanguages);
+echo '</pre>';
 
 
-$x = (int)'5';
-echo $x;
+$array = [true => 'a', 1 => 'b', '1' => 'c', 1.8 => 'd'];
+print_r($array);
+//override se dogodio jer je true = 1 i 1.8 se casta u int 1 i zato ispise samo 'd'
+
+
+//indexes: 0, 1, 50, 51, 52 
+$grades = ['A', 'B', 50 => 'C', 'D', 'F'];
+echo '<pre>';
+print_r($grades);
+echo '<pre>';
+
+#array_shift, array_pop
+
+unset($grades[1]);
+print_r($grades);
