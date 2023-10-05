@@ -1,50 +1,47 @@
 <?php
 
-// ARRAYS
-$programmingLanguages = ['PHP', 'Java', 'Python'];
+//Expressions
 
-$name = 'Ja';
-echo $programmingLanguages[0];
-
-var_dump($programmingLanguages);
-
-echo '<pre>';
-print_r($programmingLanguages);
-echo '</pre>';
-
-echo count($programmingLanguages);
-
-$programmingLanguages[]='C++';  //adding, push to an array
-array_push($programmingLanguages, 'C', 'GO');
-
-echo '<pre>';
-print_r($programmingLanguages);
-echo '</pre>';
-
-$programmingLanguages = [  //like dictionary
-    'php'=> '8.3',
-    'python' => '3.9'
-];
-
-$programmingLanguages['go'] = '1.15';
-
-echo '<pre>';
-print_r($programmingLanguages);
-echo '</pre>';
+$x = 5;
+$y = $x;
+echo $y;
 
 
-$array = [true => 'a', 1 => 'b', '1' => 'c', 1.8 => 'd'];
-print_r($array);
-//override se dogodio jer je true = 1 i 1.8 se casta u int 1 i zato ispise samo 'd'
+//Operators
+$x = 10.5;
+$y = 2.9;
+
+var_dump(fmod($x,$y));
+
+//strict comparison
+
+if($x === $y){
+    echo("They are strictly same");
+}else{
+    echo("Not equal");
+}
+
+$a = 'Hello';
+$b = strpos($a, 'H');
+
+if($y == false){
+    echo 'H not found';
+}else{
+    'H found at index' . $y;
+}
 
 
-//indexes: 0, 1, 50, 51, 52 
-$grades = ['A', 'B', 50 => 'C', 'D', 'F'];
-echo '<pre>';
-print_r($grades);
-echo '<pre>';
+$x = true;
+$y = false;
 
-#array_shift, array_pop
+$z1 = $x and $y; //veca prednost je = pa se zatim taj rezultat usporedi s y
+$z2 = $x && $y;  //logicki and
+var_dump($z1);
+var_dump($z2);
 
-unset($grades[1]);
-print_r($grades);
+
+$x=6;
+$y=1;
+echo($x>>$y); //right shift (kao dijeljenje s 2) 
+
+#operator precedence & associativity
